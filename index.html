@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/912b6f6676.js" crossorigin="anonymous"></script>
+    <title>Calcuradora</title>
+</head>
+
+<body>
+    <h1>Ana Vitória da Silva Lima - Projeto calculadora - DIW</h1>
+    <div class="content"> <!--Vai ficar dentro dessa div toda nossa calculadora-->
+
+        <div class="calculator"> <!--visor: É onde vão ser feitos os cálculos, vai tá o teclado-->
+            <p class="result" id="resultado"></p>
+
+            <table>
+                <tr>
+                    <td><button class="but ac" style="width: 106px;" onclick="clean()"> AC </button></td>
+                    <td><button class="but del"> <i class="fas fa-backspace" onclick="backspace()"></i> </button></td> 
+                    <td><button class="but operator"> <i class="fa-solid fa-divide" onclick="insert('/')"></i> </button></td>
+                </tr>
+
+                <tr>
+                    <td><button class="but" onclick="insert('7')"> 7 </button></td>
+                    <td><button class="but" onclick="insert('8')"> 8 </button></td> 
+                    <td><button class="but" onclick="insert('9')"> 9 </button></td>
+                    <td><button class="but operator" onclick="insert('*')"> x </button></td>
+                </tr>
+
+                <tr>
+                    <td><button class="but" onclick="insert('4')"> 4 </button></td>
+                    <td><button class="but" onclick="insert('5')"> 5 </button></td> 
+                    <td><button class="but" onclick="insert('6')"> 6 </button></td>
+                    <td><button class="but operator" onclick="insert('-')"> - </button></td>
+                </tr>
+
+                <tr>
+                    <td><button class="but" onclick="insert('1')"> 1 </button></td>
+                    <td><button class="but" onclick="insert('2')"> 2 </button></td> 
+                    <td><button class="but" onclick="insert('3')"> 3 </button></td>
+                    <td><button class="but operator" onclick="insert('+')"> + </button></td>
+                </tr>
+
+                <tr>
+                    <td><button class="but" onclick="insert('0')"> 0 </button></td>
+                    <td><button class="but" onclick="insert('.')"> . </button></td> 
+                    <td><button class="but igual" style="width: 106px;" onclick="conclusion()"> = </button></td> <!--a função conclusion() não tem
+                    parâmetro, porque vai nos retornar o resultado-->
+                </tr>
+
+            </table>
+
+        </div>
+
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
